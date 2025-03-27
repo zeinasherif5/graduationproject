@@ -1,0 +1,36 @@
+import 'package:flutter/material.dart';
+
+class Courts extends StatefulWidget {
+  const Courts({super.key});
+
+  @override
+  State<Courts> createState() => _CourtsState();
+}
+
+class _CourtsState extends State<Courts> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 95,
+        backgroundColor: Colors.black,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+            size: 40,
+          ),
+        ),
+      ),
+      body: const Center(
+        child: Text(
+          'Courts Page',
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+        ),
+      ),
+    );
+  }
+}
