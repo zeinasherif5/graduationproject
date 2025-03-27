@@ -1,0 +1,28 @@
+import 'package:flutter/material.dart';
+import 'package:mc_proj/Homepage.dart';
+void main() {
+  runApp(const MyApp());
+}
+// The main app widget
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        navigationBarTheme: NavigationBarThemeData(
+          indicatorColor: Colors.blueAccent,
+          labelTextStyle: MaterialStateProperty.all(
+            const TextStyle(
+              fontSize: 12,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      ),
+      home: const HomePage(),
+    );
+  }
+}
